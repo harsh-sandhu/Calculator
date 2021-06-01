@@ -44,3 +44,21 @@ input{
   background-color: #de6834;
   color: white;
 }
+p{
+  color:darkslategrey;
+  position: absolute;
+  top:90%;
+  left:45%;
+}
+@media (max-width:1000px){
+  div{
+    width:70%;
+    left:15%;
+  }
+}
+@media (max-width:600px){
+  div{
+    width:90%;
+    left:5%;
+  }
+}
