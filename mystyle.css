@@ -1,9 +1,36 @@
 body{
   width:100vw;
   height:100vh;
-  background-image: linear-gradient(135deg, darkgrey,white, white);
+  overflow: hidden;
 }
-div{
+.back{
+  position: absolute;
+  width:240%;
+  height:240%;
+  left:-70%;
+  top:-70%;
+  background-image: linear-gradient(-45deg,white,lightgrey,white,grey);
+  background-size: 240% 240%;
+  animation: gradient 5s linear infinite;
+}
+@keyframes gradient {
+    0% {
+        transform:rotate(0);
+    }
+    25% {
+        transform:rotate(90deg);
+    }
+    50% {
+        transform:rotate(180deg);
+    }
+    75% {
+        transform:rotate(270deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+.cal{
   background-color: white;
   width:35%;
   position: absolute;
@@ -14,7 +41,7 @@ div{
   border-radius: 15px;
   transition: box-shadow 1s;
 }
-div:hover{
+.cal:hover{
   box-shadow: 0px 15px 25px grey;
   transition: box-shadow 0.7s;
 }
@@ -44,12 +71,25 @@ input{
   background-color: #de6834;
   color: white;
 }
+a{
+  text-decoration: none;
+  color:darkslategrey;
+}
+a:hover{
+  text-decoration: none;
+  color:darkslategrey;
+}
 p{
   color:darkslategrey;
   position: absolute;
   top:90%;
   left:45%;
+  transition: transform 0.7s ease-in-out;
 }
+p:hover{
+  transform: scale(1.1,1.1);
+}
+
 @media (max-width:1000px){
   div{
     width:70%;
