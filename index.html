@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="mystyle.css">
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"></script>
+    <script src="myscript.js"></script>
+  </head>
+  <body>
+    <div class="text-center p-3">
+      <input type="text" style="text-align:right;" id="screen" class="display-4" disabled placeholder="0">
+      <table class="mt-2">
+        <tr>
+          <td><button id="plus" type="button" name="button" class="btn sizer btn-light orange">+</button></td>
+          <td><button id="minus" type="button" name="button" class="btn sizer btn-light orange">-</button></td>
+          <td><button id="multi" type="button" name="button" class="btn sizer btn-light orange">x</button></td>
+          <td><button id="divide" type="button" name="button" class="btn sizer btn-light orange">/</button></td>
+        </tr>
+        <tr>
+          <td><button id="1" type="button" name="button" class="btn sizer btn-light">1</button></td>
+          <td><button id="2" type="button" name="button" class="btn sizer btn-light">2</button></td>
+          <td><button id="3" type="button" name="button" class="btn sizer btn-light">3</button></td>
+          <td rowspan="4"><button id="equal" type="button" name="button" class="btn sizer btn-light equal">=</button></td>
+        </tr>
+        <tr>
+          <td><button id="4" type="button" name="button" class="btn sizer btn-light">4</button></td>
+          <td><button id="5" type="button" name="button" class="btn sizer btn-light">5</button></td>
+          <td><button id="6" type="button" name="button" class="btn sizer btn-light">6</button></td>
+        </tr>
+        <tr>
+          <td><button id="7" type="button" name="button" class="btn sizer btn-light">7</button></td>
+          <td><button id="8" type="button" name="button" class="btn sizer btn-light">8</button></td>
+          <td><button id="9" type="button" name="button" class="btn sizer btn-light">9</button></td>
+        </tr>
+        <tr>
+          <td><button id="0" type="button" name="button" class="btn sizer btn-light">0</button></td>
+          <td><button id="dot" type="button" name="button" class="btn sizer btn-light">.</button></td>
+          <td><button id="C" type="button" name="button" class="btn sizer btn-light">C</button></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
