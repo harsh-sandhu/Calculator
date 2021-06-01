@@ -91,13 +91,13 @@ p:hover{
 }
 
 @media (max-width:1000px){
-  div{
+  .cal{
     width:70%;
     left:15%;
   }
 }
 @media (max-width:600px){
-  div{
+  .cal{
     width:90%;
     left:5%;
   }
