@@ -1,140 +1,146 @@
 $(document).ready(()=>{
-  var display="";
-  var cal=0;
-  var temp="";
-  var num=0;
-  var sym="";
+  var display="0";
+  var clr=false;
   $("#C").click(()=>{
-    cal=0;
     display="0"
-    temp="";
+    clr=false;
     $("#screen").val(display);
   })
   $("#1").click(()=>{
+    if(clr){
+      display="0"
+      clr=false;
+    }
     if(display=="0"){
       display="1";
-      temp+="1";
     }else{
-    console.log(temp);
     display+="1";
-    temp=temp+"1";
   }
     $("#screen").val(display);
   })
   $("#2").click(()=>{
+    if(clr){
+      display="0"
+      clr=false;
+    }
     if(display=="0"){
       display="2";
-      temp+="2";
     }else{
     display+="2";
-    temp=temp+"2";
   }
     $("#screen").val(display);
   })
   $("#3").click(()=>{
+    if(clr){
+      display="0"
+      clr=false;
+    }
     if(display=="0"){
       display="3";
-      temp+="3";
     }else{
     display+="3";
-    temp=temp+"3";
   }
     $("#screen").val(display);
   })
   $("#4").click(()=>{
+    if(clr){
+      display="0"
+      clr=false;
+    }
     if(display=="0"){
       display="4";
-      temp+="4";
     }else{
     display+="4";
-    temp=temp+"4";
   }
     $("#screen").val(display);
   })
   $("#5").click(()=>{
+    if(clr){
+      display="0"
+      clr=false;
+    }
     if(display=="0"){
       display="5";
-      temp+="5";
     }else{
     display+="5";
-    temp=temp+"5";
   }
     $("#screen").val(display);
   })
   $("#6").click(()=>{
+    if(clr){
+      display="0"
+      clr=false;
+    }
     if(display=="0"){
       display="6";
-      temp+="6";
     }else{
     display+="6";
-    temp=temp+"6";
   }
     $("#screen").val(display);
   })
   $("#7").click(()=>{
+    if(clr){
+      display="0"
+      clr=false;
+    }
     if(display=="0"){
       display="7";
-      temp+="7";
     }else{
     display+="7";
-    temp=temp+"7";
   }
     $("#screen").val(display);
   })
   $("#8").click(()=>{
+    if(clr){
+      display="0"
+      clr=false;
+    }
     if(display=="0"){
       display="8";
-      temp+="8";
     }else{
     display+="8";
-    temp=temp+"8";
   }
     $("#screen").val(display);
   })
   $("#9").click(()=>{
+    if(clr){
+      display="0"
+      clr=false;
+    }
     if(display=="0"){
       display="9";
-      temp+="9";
     }else{
     display+="9";
-    temp=temp+"9";
   }
     $("#screen").val(display);
   })
   $("#0").click(()=>{
+    if(clr){
+      display="0"
+      clr=false;
+    }
     if(display=="0"){
       display="0";
-      temp+="0";
     }else{
     display+="0";
-    temp=temp+"0";
   }
     $("#screen").val(display);
   })
   $("#plus").click(()=>{
+    clr=false;
     if(display==="0"){
       display="0";
     }else{
     display+="+";
-    num=parseFloat(temp);
-    cal=cal+num;
-    pnum=num;
-    num=0;
-    temp="";
-    sym="+";
   }
     $("#screen").val(display);
   })
   $("#minus").click(()=>{
+    clr=false;
     if(display==="0"){
       display="0";
     }else{
     display+="-";
-    num=parseFloat(temp);
-    cal=cal-num;
-    num=0;
-    temp="";
-    sym="-";
   }
     $("#screen").val(display);
   })
@@ -142,18 +148,7 @@ $(document).ready(()=>{
     if(display==="0"){
       display="0";
     }else{
-    display+="x";
-    if(cal==0){
-      cal=1;
-    }
-    if(temp==0){
-      temp=1;
-    }
-    num=parseFloat(temp);
-    cal=cal*num;
-    num=0;
-    temp="";
-    sym="x";
+    display+="*";
   }
     $("#screen").val(display);
   })
@@ -162,22 +157,6 @@ $(document).ready(()=>{
       display="0";
     }else{
     display+="/";
-    if(cal==0){
-      cal=1;
-    }
-    if(temp==0){
-      temp=1;
-    }
-    num=parseFloat(temp);
-    if(sym==""){
-      cal=num;
-    }else{
-      cal=cal/num;
-    }
-    console.log
-    num=0;
-    temp="";
-    sym="/";
   }
     $("#screen").val(display);
   })
@@ -185,36 +164,18 @@ $(document).ready(()=>{
     if(display=="0"){
       display="0";
     }else{
-      num=parseFloat(temp);
-      if(sym=="+"){
-        cal=cal+num;
-      }
-      if(sym=="-"){
-        cal=cal-num;
-      }
-      if(sym=="x"){
-        cal=cal*num;
-      }
-      if(sym=="/"){
-        cal=cal/num;
-      }
-      cal=Math.round(cal*10000000000)/10000000000;
+      console.log(eval(display));
+      var cal=eval(display)
       display=cal.toString();
-      temp="0";
   }
   $("#screen").val(display);
   })
   $("#dot").click(()=>{
-    if(display=="0"){
-      display="0."
-      temp=temp+"0.";
+    if(parseInt(display[display.length-1])>=0&&parseInt(display[display.length-1])<10){
+      display+="."
     }else{
-    display+=".";
-    temp+="."
+    display+="0.";
   }
     $("#screen").val(display);
   })
 })
-// function clicker(){
-//
-// }
